@@ -1,0 +1,46 @@
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-sans: system-ui, sans-serif;
+
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+
+  --primary-glow: linear-gradient(
+    45deg,
+    hsl(194deg 42% 88%) 0%,
+    hsl(127deg 65% 87%) 46%,
+    hsl(58deg 84% 85%) 100%
+  );
+
+  --card-rgb: 180, 185, 188;
+  --card-border-rgb: 131, 134, 135;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}

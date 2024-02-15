@@ -1,0 +1,127 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  background-color: #ffffff;
+  padding: 24px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.hero {
+  background-image: var(--primary-glow);
+  height: 100px;
+  width: 100%;
+}
+
+.search {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.06);
+  padding: 16px 24px;
+  max-width: 628px;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid transparent;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(33.33%, auto));
+  max-width: 100%;
+  width: var(--max-width);
+}
+
+.card {
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  color: inherit;
+  line-height: 1.25;
+  text-decoration: none;
+  transition: background 200ms, border 200ms;
+}
+
+.card img {
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card span {
+  display: inline-block;
+  transition: transform 200ms;
+}
+
+.card h2 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.card p {
+  margin: 0;
+  opacity: 0.6;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+  text-wrap: balance;
+}
+
+.logo {
+  position: relative;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 120px;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .card {
+    padding: 1rem 2.5rem;
+  }
+
+  .card h2 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
